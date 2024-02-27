@@ -61,6 +61,6 @@ O projeto está organizado da seguinte forma:
 
 7.  **Métodos Bancários:**
     -   Utiliza as classes `App`, `ContaCorrente` e `ContaPoupanca`para realizar `Saque`, `Depósito` e `Transferência`.
-    -   Permite o tipo de Conta Corrente sacar, depositar e transferir para o mesmo tipo de conta como também para Conta Poupança.
-    -   Permite o tipo de Conta Poupança sacar, depositar e transferir para o mesmo tipo de conta como também para Conta Corrente.
+    -   Permite o tipo de  `ContaCorrente` sacar, depositar e transferir para o mesmo tipo de conta como também para Conta Poupança.
+    -   Permite o tipo de `ContaPoupança` sacar, depositar e transferir para o mesmo tipo de conta como também para Conta Corrente.
     
