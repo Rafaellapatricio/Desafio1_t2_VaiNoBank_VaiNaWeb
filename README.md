@@ -32,11 +32,6 @@ O projeto está organizado da seguinte forma:
     -   Atributos: List<Contas> listaContas.
     -   Métodos: Construtores, criarConta, localizarConta, listarContas, excluirConta.
     
-**`App.java`**: Classe que modela as características de um animal de estimação.
-    
-    -   Atributos: Nome, espécie, idade, etc.
-    -   Métodos: Construtores.
-
 **`ContaPoupanca.java`**: Classe responsável por as informações dos titulares do tipo Conta Poupanca.
     
     -   Atributos: List<Contas> listaContas.
@@ -55,3 +50,17 @@ O projeto está organizado da seguinte forma:
 4.  **Consulta de Informações:**
     -   Utiliza as classes `ContaCorrente` e `ContaPoupanca`para visualizar as informações.
     -   Permite visualizar as informações dos titulares.
+
+5.  **Edição de Informações:**
+    -   Utiliza as classes `App`, `ContaCorrente` e `ContaPoupanca`para editar as informações.
+    -   Permite editar as informações dos titulares.
+
+6.  **Exclusão de Contas:**
+    -   Utiliza as classes `App`, `ContaCorrente` e `ContaPoupanca`para excluir as respectivas contas.
+    -   Permite editar as informações dos titulares.    
+
+7.  **Métodos Bancários:**
+    -   Utiliza as classes `App`, `ContaCorrente` e `ContaPoupanca`para realizar `Saque`, `Depósito` e `Transferência`.
+    -   Permite o tipo de Conta Corrente sacar, depositar e transferir para o mesmo tipo de conta como também para Conta Poupança.
+    -   Permite o tipo de Conta Poupança sacar, depositar e transferir para o mesmo tipo de conta como também para Conta Corrente.
+    
