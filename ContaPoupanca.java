@@ -3,7 +3,7 @@ package br.com.vainaweb.vainubank;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ContaPoupanca extends Conta {
+public class ContaPoupanca implements Operacoes {
 	
 	List<Conta> listaContas = new ArrayList<Conta>(100);
 	
