@@ -50,5 +50,16 @@ public class ContaPoupanca implements Operacoes {
 		
 		//listaContas.getSaldo()-porc;
 		//todo saque tera um acrescimo de 2% de juros em cima do valor	
+	}
+	@Override
+	public void Transferir() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void Sacar() {
+		// TODO Auto-generated method stub
+		
 	}	
 }
