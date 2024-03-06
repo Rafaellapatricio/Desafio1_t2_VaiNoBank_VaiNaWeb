@@ -473,6 +473,7 @@ public class App {
            }
            else {
         	   System.out.println("Valor de saldo insuficiente para saque.!");
+		   System.out.println("Deseja sacar do seu Limite Especial?");
            }
         }
         //fim da execução
