@@ -455,27 +455,47 @@ public class App {
     
     static void realizarSaque(Scanner sc, ContaCorrente cc) {
     	System.out.print("\nDigite o número da conta: ");
-        int setNumero = sc.nextInt();
-        sc.nextLine();
-        
-        Conta contaSelecionada = cc.localizarConta(setNumero);
-        
-        if (contaSelecionada != null) {
-           System.out.println("Titular da conta: " + contaSelecionada.getNome()+" | Saldo: R$" + contaSelecionada.getSaldo());
-           System.out.println("Valor do saque: ");
-           double entrada =sc.nextDouble();
-           
-           //verificar se o saldo é suficiente para saque.
-           if(entrada<=contaSelecionada.getSaldo()) {
-	           double saida= contaSelecionada.getSaldo()-entrada;
-	           contaSelecionada.setSaldo(saida);
-	           System.out.println("Saque realizado!\n Saldo atual: R$ "+saida);
-           }
-           else {
-        	   System.out.println("Valor de saldo insuficiente para saque.!");
-		   System.out.println("Deseja sacar do seu Limite Especial?");
-           }
-        }
+		int setNumero = sc.nextInt();
+		sc.nextLine();
+		Conta contaSelecionada = cc.localizarConta(setNumero);
+		if (contaSelecionada != null) {
+			System.out.println(
+					"Titular da conta: " + contaSelecionada.getNome() + " | Saldo: R$" + contaSelecionada.getSaldo());
+			System.out.println("Valor do saque: ");
+			double entrada = sc.nextDouble();
+			// verificar se o saldo é suficiente para saque.
+			if (entrada <= contaSelecionada.getSaldo()) {
+				double saida = contaSelecionada.getSaldo() - entrada;
+				contaSelecionada.setSaldo(saida);
+				System.out.println("Saque realizado!\n Saldo atual: R$ " + saida);
+			} else {
+				System.out.println("Valor de saldo  insuficiente.");
+				System.out.println("Deseja sacar do seu Limite Especial?");
+				System.out.println("1. SIM");
+				System.out.println("2. NÃO");
+				int opcaoEscolhida= sc.nextInt();
+				sc.nextLine();
+				
+				if(opcaoEscolhida ==1) {
+					System.out.println("Seu limite especial é no total de R$ 1.000,00.");
+					System.out.println("Quanto deseja sacar?");
+					double valor= sc.nextDouble();
+					if(valor <= contaSelecionada.getLimiteCredito()) {
+						System.out.println("Saque de R$"+ valor+" do limite especial realizado com sucesso.");
+						
+					}else{
+						System.out.println("Valor insuficiente.");
+						
+					}
+				}
+				if(opcaoEscolhida==2) {
+					System.out.println("Digite 0 para Sair da Opção de Saque.");
+					
+				}else {
+					System.out.println("OPÇÃO INVÁLIDA");
+				}
+			}
+		}
         //fim da execução
     }
     
